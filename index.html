@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Central Official</title>
+    <link rel="stylesheet" href="styles.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                  <img src="images/Quantum1.png" alt="profile pic">
+                    <div class="logo-text">Quantum Central</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Coming</a></li>
+                        <li><a href="#">Coming</a></li>
+                        <li><a href="#">Coming</a></li>
+                        <li><a href="#">Coming</a></li>
+                        <li><a href="#">Coming</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/Quantum1.png" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi saya <span class="input">Dapin | Developer</span></h5>
+                    <h1>Quantum Central</h1>
+                    <p> Discord mods Quantum ini dengan mods mods keren dan juga gta, seperti 
+                      mods weapon pack , sound, skin , other.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="https://discord.com/invite/JgFDZ7HKMx" class="btn active">Join Discord</a>
+                       <a href="https://www.youtube.com/channel/UC6xL8N5R6j77RPMWVq3xUzQ" class="btn active">Youtube Dapin</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Dapin Development"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        });
+
+        // Animasi smooth ketika menggulir ke bagian tertentu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+     </script>
+     <footer>
+        <div class="copyright">
+            &copy; 2024 Quantum Central Official. Developer Dapin.
+        </div>
+     </footer>
+</body>
+</html>
